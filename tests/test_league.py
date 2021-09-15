@@ -1,13 +1,10 @@
-
 from TeamResult import TeamResult
 from Team import Team
 from League import League
 
-
 def test_add_team():
     league = League()
     team = Team("Chiefs")
-    
     league.addTeam(team)
     
     assert len(league.getListOfTeams()) == 1
