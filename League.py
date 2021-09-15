@@ -11,7 +11,13 @@ class League:
         
     def getListOfTeams(self) -> List[Team]:
         return self.list_of_teams
-        
+    
+    def getTeamWithTeamName(self, teamName) -> Team:
+        for team in self.list_of_teams:
+            if team.getTeamName() == teamName:
+                return team
+        return None
+            
     def checkIfTeamsExist(self, teams):
         for team in teams:
             addNewTeam = True
