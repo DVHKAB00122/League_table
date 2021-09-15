@@ -27,10 +27,9 @@ class League:
             if addNewTeam:
                 self.addTeam(team)
                     
-    def getStandingOrderByName(self):
+    def getStandingOrderByName(self) -> List[Team]:
         sortByNameAndPoints = sorted(self.getListOfTeams(), key=lambda x: (x.getPoints(), x.getTeamName()),reverse=True)
-        for team in sortByNameAndPoints:
-            print(team)
+        return sortByNameAndPoints
             
     def updateTeamPoints(self, teamObj: Team, points: int):
         for team in self.list_of_teams:

@@ -12,6 +12,7 @@ def test_add_team():
     
     assert len(league.getListOfTeams()) == 1
     
+    
 def test_update_team_points():
     league = League()
     team = Team("Chiefs")
@@ -33,6 +34,17 @@ def test_game_points():
     assert len(league.getListOfTeams()) == 2
     assert league.getTeamWithTeamName("Chiefs").getPoints() == 0
     assert league.getTeamWithTeamName("Pirates").getPoints() == 3
+    
+def test_get_league_standing():
+    league = League()
+    team1 = Team("Chiefs")
+    team2 = Team("Pirates")
+    league.addTeam(team1)
+    league.addTeam(team2)
+    league.updateTeamPoints(team1,12)
+    
+    assert league.getStandingOrderByName() == [ team2, team1]
+    
     
     
     
