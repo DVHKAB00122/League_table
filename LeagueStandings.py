@@ -18,6 +18,7 @@ class LeagueStandings:
                 
                 league.gamePoints(team1GameResult ,team2GameResult)
         
-        league.getStandingOrderByName()
+        for team in league.getStandingOrderByName():
+            print(team)
     if __name__ == "__main__":
         main()
