@@ -32,7 +32,7 @@ def test_game_points():
     
     assert len(league.getListOfTeams()) == 2
     assert league.getTeamWithTeamName("Chiefs").getPoints() == 0
-    assert league.getTeamWithTeamName("Chiefs").getPoints() == 3
+    assert league.getTeamWithTeamName("Pirates").getPoints() == 3
     
     
     
