@@ -41,9 +41,9 @@ def test_get_league_standing():
     team2 = Team("Pirates")
     league.addTeam(team1)
     league.addTeam(team2)
-    league.updateTeamPoints(team1,12)
+    league.updateTeamPoints(team2,12)
     
-    assert league.getStandingOrderByName() == [ team2, team1]
+    assert league.getStandingOrderByName()[0].getTeamName() == "Pirates"
     
     
     
