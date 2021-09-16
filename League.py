@@ -6,47 +6,47 @@ class League:
     def __init__(self):
         self.list_of_teams: List[Team] = []
 
-    def addTeam(self, team):
+    def add_team(self, team):
         self.list_of_teams.append(team)
         
-    def getListOfTeams(self) -> List[Team]:
+    def get_list_of_teams(self) -> List[Team]:
         return self.list_of_teams
     
-    def getTeamWithTeamName(self, teamName) -> Team:
+    def get_team_with_team_name(self, team_name) -> Team:
         for team in self.list_of_teams:
-            if team.getTeamName() == teamName:
+            if team.get_team_name() == team_name:
                 return team
         return None
             
-    def checkIfTeamsExist(self, teams):
+    def check_if_teams_exist(self, teams):
         for team in teams:
-            addNewTeam = True
-            for existingTeam in self.list_of_teams:
-                if team.getTeamName() == existingTeam.getTeamName():
-                    addNewTeam = False
-            if addNewTeam:
-                self.addTeam(team)
+            add_new_team = True
+            for existing_team in self.list_of_teams:
+                if team.get_team_name() == existing_team.get_team_name():
+                    add_new_team = False
+            if add_new_team:
+                self.add_team(team)
                     
-    def getStandingOrderByName(self) -> List[Team]:
-        sortByNameAndPoints = sorted(self.getListOfTeams(), key=lambda x: (x.getPoints(), x.getTeamName()),reverse=True)
-        return sortByNameAndPoints
+    def get_standing_order_by_name(self) -> List[Team]:
+        sort_by_name_and_points = sorted(self.get_list_of_teams(), key=lambda x: (x.get_points(), x.get_team_name()),reverse=True)
+        return sort_by_name_and_points
             
-    def updateTeamPoints(self, teamObj: Team, points: int):
+    def update_team_points(self, team_obj: Team, points: int):
         for team in self.list_of_teams:
-            if team.getTeamName() == teamObj.getTeamName():
+            if team.get_team_name() == team_obj.get_team_name():
                 team.add_points(points)
         
-    def gamePoints(self, team1Game: TeamResult, team2Game: TeamResult):
-        team1: Team = team1Game.getTeam()
-        team2: Team = team2Game.getTeam()
-        list_of_teams: List[Team] = [team1, team2]
-        self.checkIfTeamsExist(list_of_teams)
+    def game_points(self, team_1_game: TeamResult, team_2_game: TeamResult):
+        team_1: Team = team_1_game.get_team()
+        team_2: Team = team_2_game.get_team()
+        list_of_teams: List[Team] = [team_1, team_2]
+        self.check_if_teams_exist(list_of_teams)
          
-        if int(team1Game.getScore()) == int(team2Game.getScore()):
-            self.updateTeamPoints(team1, 1)
-            self.updateTeamPoints(team2, 1)
-        elif int(team1Game.getScore()) > int(team2Game.getScore()):
-            self.updateTeamPoints(team1, 3)
+        if int(team_1_game.get_score()) == int(team_2_game.get_score()):
+            self.update_team_points(team_1, 1)
+            self.update_team_points(team_2, 1)
+        elif int(team_1_game.get_score()) > int(team_2_game.get_score()):
+            self.update_team_points(team_1, 3)
         else:
-            self.updateTeamPoints(team2, 3)
+            self.update_team_points(team_2, 3)
         

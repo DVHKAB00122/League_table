@@ -5,11 +5,11 @@ class TeamResult:
         self.team: Team = team
         self.score: int = score
         
-    def getScore(self) -> int:
+    def get_score(self) -> int:
         return self.score
     
-    def getTeam(self) -> Team:
+    def get_team(self) -> Team:
         return self.team
     
     def __str__(self) -> str:
-        return self.getTeam().__str__() +" "+ str(self.getScore())
+        return self.get_team().__str__() +" "+ str(self.get_score())
