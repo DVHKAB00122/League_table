@@ -1,6 +1,7 @@
-from src.TeamResult import TeamResult
-from src.Team import Team
-from src.League import League
+
+from TeamResult import TeamResult
+from Team import Team
+from League import League
 
 
 def test_add_team():
@@ -42,11 +43,3 @@ def test_get_league_standing():
     league.update_team_points(team2,12)
     
     assert league.get_standing_order_by_name()[0].get_team_name() == "Pirates"
-    
-    
-    
-    
-    
-    
-    
-    

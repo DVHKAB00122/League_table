@@ -1,5 +1,8 @@
-from src.TeamResult import TeamResult
-from src.Team import Team
+
+
+
+from Team import *
+from TeamResult import *
 
 
 def test_get_team_result():

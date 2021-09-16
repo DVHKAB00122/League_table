@@ -1,6 +1,7 @@
 
 
-from src.Team import Team
+
+from Team import Team
 
 
 def test_add_points():
