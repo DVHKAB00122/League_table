@@ -1,4 +1,7 @@
-from Team import Team
+
+
+from src.Team import Team
+
 
 def test_add_points():
     team = Team("Chiefs")

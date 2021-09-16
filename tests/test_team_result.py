@@ -1,5 +1,6 @@
-from TeamResult import TeamResult
-from Team import Team
+from src.TeamResult import TeamResult
+from src.Team import Team
+
 
 def test_get_team_result():
     team = Team("Chiefs")

@@ -1,5 +1,5 @@
-from TeamResult import TeamResult
-from Team import Team
+from src.TeamResult import TeamResult
+from src.Team import Team
 from typing import List
 
 class League:

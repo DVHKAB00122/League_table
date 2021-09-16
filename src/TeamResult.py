@@ -1,4 +1,4 @@
-from Team import Team
+from src.Team import Team
 
 class TeamResult:
     def __init__(self, team, score):

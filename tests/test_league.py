@@ -1,6 +1,7 @@
-from TeamResult import TeamResult
-from Team import Team
-from League import League
+from src.TeamResult import TeamResult
+from src.Team import Team
+from src.League import League
+
 
 def test_add_team():
     league = League()

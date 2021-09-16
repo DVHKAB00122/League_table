@@ -1,6 +1,6 @@
-from Team import Team
-from TeamResult import TeamResult
-from League import League
+from src.Team import Team
+from src.TeamResult import TeamResult
+from src.League import League
   
 class LeagueStandings:
     
